@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Jokes = (props) => {
-  const [showAnswer, setShowAnswer] = useState(true);
+  const [showAnswer, setShowAnswer] = useState(false);
 
   const { joke } = props;
 

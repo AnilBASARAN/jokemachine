@@ -1,7 +1,8 @@
 import './App.css';
-import {useState} from "react";
+import {useState , useEffect} from "react";
 import Joke from "./Jokes.jsx";
 import clsx from "clsx";
+
 
 
 const App = () => {
@@ -12,7 +13,11 @@ const App = () => {
     fetch("https://api.react-formula.com/learning-api/demos/random-joke/jokes")
     .then((response)=>response.json())
     .then((data)=>setJoke(data))
-  }
+  };
+
+  useEffect(()=>{
+    fetchJoke();
+  },[])
   
   return <div className=" flex h-screen justify-center items-center">
 

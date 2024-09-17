@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Joke from "./Jokes.jsx";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const JOKE = {
+  question: "Why don't eggs tell jokes?",
+  answer: "They'd crack each other up.",
+};
+
+const App = () => {
+
+  
+  
+  return <div className=" flex h-screen justify-center items-center">
+
+    <div className="w-full max-w-xl flex justify-center items-center">
+    <Joke joke={JOKE} />
     </div>
-  );
-}
+    
+  </div>;
+};
 
 export default App;
